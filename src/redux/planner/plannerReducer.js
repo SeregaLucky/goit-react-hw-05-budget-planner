@@ -14,6 +14,7 @@ const budgetReducer = (state = 0, { type, payload }) => {
 const expensesReducer = (state = [], { type, payload }) => {
   switch (type) {
     case types.ADD_EXPENSE:
+      console.log(payload);
       return [payload.expense, ...state];
 
     case types.REMOVE_EXPENSE:

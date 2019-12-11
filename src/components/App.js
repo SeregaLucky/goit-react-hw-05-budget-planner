@@ -1,8 +1,10 @@
+/* eslint-disable */
 /* import - node_modules */
 import React from 'react';
 import { connect } from 'react-redux';
 import styled from 'styled-components';
 import T from 'prop-types';
+import shortid from 'shortid';
 /* import - CSS */
 import '../App.css';
 /* import - selectors */
@@ -73,9 +75,31 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  saveBudget: value => dispatch(AC.saveBudgetAC(value)),
-  addExpense: (name, amount) => dispatch(AC.addExpenseAC(name, amount)),
-  removeExpense: id => dispatch(AC.removeExpenseAC(id)),
+  saveBudget: value => dispatch(AC.saveBudgetAC({ value })),
+  addExpense: ({ name, amount }) =>
+    dispatch(
+      AC.addExpenseAC({
+        expense: { id: shortid.generate(), name, amount: Number(amount) },
+      }),
+    ),
+  removeExpense: id => dispatch(AC.removeExpenseAC({ id })),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);
+
+//
+//
+
+// const mapDispatchToProps = dispatch => ({
+//   // saveBudget: value => dispatch(AC.saveBudgetAC(value)),
+//   saveBudget: value => dispatch(AC.saveBudgetAC({ value })),
+//   // addExpense: (name, amount) => dispatch(AC.addExpenseAC(name, amount)),
+//   addExpense: (name, amount) =>
+//     dispatch(
+//       AC.addExpenseAC({
+//         expense: { id: shortid.generate(), name, amount: Number(amount) },
+//       }),
+//     ),
+//   // removeExpense: id => dispatch(AC.removeExpenseAC(id)),
+//   removeExpense: id => dispatch(AC.removeExpenseAC({ id })),
+// });
