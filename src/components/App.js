@@ -90,6 +90,7 @@ export default connect(mapStateToProps, mapDispatchToProps)(App);
 //
 //
 
+/* OLD mapDispatchToProps */
 // const mapDispatchToProps = dispatch => ({
 //   // saveBudget: value => dispatch(AC.saveBudgetAC(value)),
 //   saveBudget: value => dispatch(AC.saveBudgetAC({ value })),
