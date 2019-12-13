@@ -1,21 +1,21 @@
 {
   "files": {
     "main.css": "/goit-react-hw-05-budget-planner/static/css/main.eb52151a.chunk.css",
-    "main.js": "/goit-react-hw-05-budget-planner/static/js/main.e5ca5ad8.chunk.js",
-    "main.js.map": "/goit-react-hw-05-budget-planner/static/js/main.e5ca5ad8.chunk.js.map",
+    "main.js": "/goit-react-hw-05-budget-planner/static/js/main.5af6ac58.chunk.js",
+    "main.js.map": "/goit-react-hw-05-budget-planner/static/js/main.5af6ac58.chunk.js.map",
     "runtime-main.js": "/goit-react-hw-05-budget-planner/static/js/runtime-main.17532924.js",
     "runtime-main.js.map": "/goit-react-hw-05-budget-planner/static/js/runtime-main.17532924.js.map",
-    "static/js/2.16efb236.chunk.js": "/goit-react-hw-05-budget-planner/static/js/2.16efb236.chunk.js",
-    "static/js/2.16efb236.chunk.js.map": "/goit-react-hw-05-budget-planner/static/js/2.16efb236.chunk.js.map",
+    "static/js/2.85ae9cc5.chunk.js": "/goit-react-hw-05-budget-planner/static/js/2.85ae9cc5.chunk.js",
+    "static/js/2.85ae9cc5.chunk.js.map": "/goit-react-hw-05-budget-planner/static/js/2.85ae9cc5.chunk.js.map",
     "index.html": "/goit-react-hw-05-budget-planner/index.html",
-    "precache-manifest.d059988a798941dd26e4aab22a1e7b7c.js": "/goit-react-hw-05-budget-planner/precache-manifest.d059988a798941dd26e4aab22a1e7b7c.js",
+    "precache-manifest.492deaa8ea0a740a6f3eb273cc0c4ca1.js": "/goit-react-hw-05-budget-planner/precache-manifest.492deaa8ea0a740a6f3eb273cc0c4ca1.js",
     "service-worker.js": "/goit-react-hw-05-budget-planner/service-worker.js",
     "static/css/main.eb52151a.chunk.css.map": "/goit-react-hw-05-budget-planner/static/css/main.eb52151a.chunk.css.map"
   },
   "entrypoints": [
     "static/js/runtime-main.17532924.js",
-    "static/js/2.16efb236.chunk.js",
+    "static/js/2.85ae9cc5.chunk.js",
     "static/css/main.eb52151a.chunk.css",
-    "static/js/main.e5ca5ad8.chunk.js"
+    "static/js/main.5af6ac58.chunk.js"
   ]
 }
