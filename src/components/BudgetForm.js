@@ -1,6 +1,9 @@
 /* import - node_modules */
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import T from 'prop-types';
+/* import - action creator */
+import * as AC from '../redux/planner/plannerActions';
 /* import - COMPONENT */
 import Form from './shared/Form';
 import Label from './shared/Label';
@@ -14,7 +17,7 @@ const labelStyles = `
 /*
  * COMPONENT
  */
-export default class BudgetForm extends Component {
+class BudgetForm extends Component {
   static propTypes = {
     onSave: T.func.isRequired,
   };
@@ -52,3 +55,12 @@ export default class BudgetForm extends Component {
     );
   }
 }
+
+/*
+ * CONNECT
+ */
+const mapDispatchToProps = dispatch => ({
+  onSave: value => dispatch(AC.saveBudgetAC({ value })),
+});
+
+export default connect(null, mapDispatchToProps)(BudgetForm);

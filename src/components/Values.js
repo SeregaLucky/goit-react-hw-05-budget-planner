@@ -1,7 +1,10 @@
 /* import - node_modules */
 import React from 'react';
+import { connect } from 'react-redux';
 import styled from 'styled-components';
 import T from 'prop-types';
+/* import - selectors */
+import selectors from '../redux/planner/plannerSelectors';
 /* import - COMPONENT */
 import Stat from './Stat';
 
@@ -28,4 +31,13 @@ Values.propTypes = {
   balance: T.number.isRequired,
 };
 
-export default Values;
+/*
+ * CONNECT
+ */
+const mapStateToProps = state => ({
+  expenses: selectors.calculateTotalExpenses(state),
+  budget: selectors.getbudget(state),
+  balance: selectors.calculateBalance(state),
+});
+
+export default connect(mapStateToProps)(Values);

@@ -1,6 +1,10 @@
 /* import - node_modules */
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import T from 'prop-types';
+import shortid from 'shortid';
+/* import - action creator */
+import * as AC from '../redux/planner/plannerActions';
 /* import - COMPONENT */
 import Form from './shared/Form';
 import Label from './shared/Label';
@@ -14,7 +18,7 @@ const labelStyles = `
 /*
  * COMPONENT
  */
-export default class ExpenseForm extends Component {
+class ExpenseForm extends Component {
   static propTypes = {
     onSave: T.func.isRequired,
   };
@@ -71,3 +75,17 @@ export default class ExpenseForm extends Component {
     );
   }
 }
+
+/*
+ * CONNECT
+ */
+const mapDispatchToProps = dispatch => ({
+  onSave: ({ name, amount }) =>
+    dispatch(
+      AC.addExpenseAC({
+        expense: { id: shortid.generate(), name, amount: Number(amount) },
+      }),
+    ),
+});
+
+export default connect(null, mapDispatchToProps)(ExpenseForm);
